@@ -1,6 +1,17 @@
 body {
   font-family: arial, sans-serif;
 }
+.row {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+div {
+  display: block;
+}
 
 h1 {
   color: #7c7c7c;

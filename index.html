@@ -11,65 +11,100 @@
       crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="main.css" />
     <title>Weather App</title>
   </head>
 
   <body>
-    <div class="container">
-      <div class="weather-app">
-        <form class="search-form" id="search-form">
+    <div id="root">
+      <div class="App">
+        <div class="container">
+          <div class="Weather">
+          <form>
           <div class="row">
-            <div class="col-6">
+            <div class="col-9">
               <input
                 type="search"
                 placeholder="Type a city.."
                 autofocus="on"
                 autocomplete="off"
                 id="city-input"
-                class="form-control shadow-sm"
-              />
+                class="form-control search-input"
+              >
             </div>
-            <div class="col-3">
+            <div class="col-3 p-0">
               <input
                 type="submit"
                 value="Search"
-                class="form-control btn btn-primary shadow-sm w-100"
-              />
-            </div>
-            <div class="col-3">
-              <button
-                class="btn btn-success w-100"
-                id="current-location-button"
-              >
-                Current
-              </button>
+                class="btn btn-primary w-100">
             </div>
           </div>
         </form>
-        <h1 id="city"></h1>
-        <ul>
-          <li id="date"></li>
-          <li id="description"></li>
+        <div class="weatherInfo">
+          <div class="row">
+            <div class="col-6">
+              <h1 id="city">London</h1>
+                <ul>
+          <li id="date"><span></span></li>
+          <li id="description"><strong></strong></li>
         </ul>
-        <div class="row">
+            </div>
           <div class="col-6">
-            <div class="clearfix">
-              <div class="float-left">
+            <div class="temperature-container d-flex justify-content-end">
+              <div>
                 <span class="temperature" id="temperature"></span
-                ><span class="units">°C</span>
+                ><span class="units"> °C</span>
               </div>
             </div>
           </div>
-          <div class="col-6">
-            <ul>
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="wind"></span> km/h</li>
-            </ul>
           </div>
         </div>
-      </div>
-    </div>
+          <div class="WeatherForecast row">
+            <div class="col">
+              <div class="WeatherForecastPreview">
+                <div class="forecast-time">Wed</div>
+                <canvas width="38" height="38">
+                  <div class="forecast-temperature"><span class="forecast-temperature-max"></span>
+                  <span class="forecast-temperature-min"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="WeatherForecastPreview">Thu</div>
+              <canvas width="38" height="38">
+                  <div class="forecast-temperature"><span class="forecast-temperature-max">28°</span>
+                  <span class="forecast-temperature-min">20°</span>
+            </div>
+          </div>
+          </div>
+            <div class="col">
+              <div class="WeatherForecastPreview">Fri</div>
+              <canvas width="38" height="38">
+                  <div class="forecast-temperature"><span class="forecast-temperature-max">29°</span>
+                  <span class="forecast-temperature-min">23°</span>
+            </div>
+          </div>
+          </div>
+          <div class="col">
+              <div class="WeatherForecastPreview">Sat</div>
+              <canvas width="38" height="38">
+                  <div class="forecast-temperature"><span class="forecast-temperature-max">25°</span>
+                  <span class="forecast-temperature-min">18°</span>
+            </div>
+          </div>
+          </div>
+          <div class="col">
+              <div class="WeatherForecastPreview">Sun</div>
+              <canvas width="38" height="38">
+                  <div class="forecast-temperature"><span class="forecast-temperature-max">24°</span>
+                  <span class="forecast-temperature-min">18°</span>
+            </div>
+          </div>
+          </div>
+          <footer>
+            This project was coded by
+            <a href="https://github.com/Olga-coder"target="_blank" rel="noopener noreferrer"></a>
+          </footer>            
     <script src="src/index.js"></script>
   </body>
 </html>
