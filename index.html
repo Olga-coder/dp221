@@ -16,95 +16,37 @@
   </head>
 
   <body>
-    <div id="root">
-      <div class="App">
-        <div class="container">
-          <div class="Weather">
-          <form>
-          <div class="row">
-            <div class="col-9">
-              <input
-                type="search"
-                placeholder="Type a city.."
-                autofocus="on"
-                autocomplete="off"
-                id="city-input"
-                class="form-control search-input"
-              >
-            </div>
-            <div class="col-3 p-0">
-              <input
-                type="submit"
-                value="Search"
-                class="btn btn-primary w-100">
-            </div>
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="overview">
+            <h1>London</h1>
+            <ul>
+              <li>Friday 5.00</li>
+              <li>Clear</li>
+            </ul>
           </div>
-        </form>
-        <div class="weatherInfo">
           <div class="row">
             <div class="col-6">
-              <h1 id="city">London</h1>
-                <ul>
-          <li id="date"><span></span></li>
-          <li id="description"><strong></strong></li>
-        </ul>
-            </div>
-          <div class="col-6">
-            <div class="temperature-container d-flex justify-content-end">
-              <div>
-                <span class="temperature" id="temperature"></span
-                ><span class="units"> °C</span>
+              <div class="d-flex weather-temperature">
+                <strong>12</strong> °C | °F
               </div>
             </div>
-          </div>
+            <div class="col-6">
+              <ul>
+                <li>Precipitation:0%</li>
+                <li>Humidity: 70%</li>
+                <li>Wind: 2km/h</li>
+              </ul>
+            </div>
           </div>
         </div>
-          <div class="WeatherForecast row">
-            <div class="col">
-              <div class="WeatherForecastPreview">
-                <div class="forecast-time">Wed</div>
-                <canvas width="38" height="38">
-                  <div class="forecast-temperature"><span class="forecast-temperature-max"></span>
-                  <span class="forecast-temperature-min"></span>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="WeatherForecastPreview">Thu</div>
-              <canvas width="38" height="38">
-                  <div class="forecast-temperature"><span class="forecast-temperature-max">28°</span>
-                  <span class="forecast-temperature-min">20°</span>
-            </div>
-          </div>
-          </div>
-            <div class="col">
-              <div class="WeatherForecastPreview">Fri</div>
-              <canvas width="38" height="38">
-                  <div class="forecast-temperature"><span class="forecast-temperature-max">29°</span>
-                  <span class="forecast-temperature-min">23°</span>
-            </div>
-          </div>
-          </div>
-          <div class="col">
-              <div class="WeatherForecastPreview">Sat</div>
-              <canvas width="38" height="38">
-                  <div class="forecast-temperature"><span class="forecast-temperature-max">25°</span>
-                  <span class="forecast-temperature-min">18°</span>
-            </div>
-          </div>
-          </div>
-          <div class="col">
-              <div class="WeatherForecastPreview">Sun</div>
-              <canvas width="38" height="38">
-                  <div class="forecast-temperature"><span class="forecast-temperature-max">24°</span>
-                  <span class="forecast-temperature-min">18°</span>
-            </div>
-          </div>
-          </div>
-          <footer>
-            This project was coded by
-            <a href="https://github.com/Olga-coder"target="_blank" rel="noopener noreferrer"></a>
-          </footer>            
-    <script src="src/index.js"></script>
+      </div>
+      <small
+        ><a href="https://github.com/Olga-coder/dp221.git"> source code</a> by
+        Olga Cherkashyna</small
+      >
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

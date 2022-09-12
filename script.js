@@ -1,6 +1,9 @@
-let now = new Date();
+let apiKey = "08e78219c87d99220692bb5baa65854d";
+let apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={apiKey}';
+console.log(apiUrl);
 
-let currentdate = document.querySelector("#weekDay");
+
+function
 
 let date = now.getDate();
 let hours = now.getHours();
@@ -31,9 +34,6 @@ function search(event) {
   let searchInput = document.querySelector("#searchF");
 
   let h1 = document.querySelector("h1");
-  h2.innerHTML = `${searchInput.value}`;
+  h1.innerHTML = `${searchInput.value}`;
 }
 
-let form1 = document.querySelector("#searchF");
-
-form.addEventListener("submit", search);
