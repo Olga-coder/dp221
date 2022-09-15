@@ -25,7 +25,6 @@ function displayTemperature(response) {
   windElement.innerHtml = response.data.wind.speed;
 }
 let apiKey = "d07425abe7948f94ff4d95c78538a93d";
-let apiUrl =
-  "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apiKey}&units=metric";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={apiKey}`;
 
 axios.get(apiUrl).then(displayTemperature);
