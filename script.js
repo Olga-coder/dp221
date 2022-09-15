@@ -24,7 +24,18 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.main.humidity;
   windElement.innerHtml = response.data.wind.speed;
 }
-let apiKey = "d07425abe7948f94ff4d95c78538a93d";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={apiKey}`;
+function search(city) {
+  let apiKey = "d07425abe7948f94ff4d95c78538a93d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={apiKey}`;
 
-axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
+}
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+search("London");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
