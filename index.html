@@ -18,7 +18,7 @@
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
-        <div class="weather-app">
+        <div class="weather-app" id="backgrounder">
           <form id="search-form" class="mb-3">
             <div class="row">
               <div class="col-9">
@@ -52,20 +52,14 @@
                 <div class="float-left">
                   <strong id="temperature">12</strong>
                   <span class="units"
-                    ><a href="#" id="celcius-link" class="active"> °C</a> |<a
-                      href="#"
-                      id="fahrenheit-link"
-                    >
-                      °F</a
-                    ></span
-                  >
+                    > °C
                 </div>
               </div>
             </div>
             <div class="col-6">
               <ul>
                 <li>Humidity:<span id="humidity"> </span>%</li>
-                <li>Wind:<span id="wind"></span>km/h</li>
+                <li>Wind:<span id="wind"></span>m/sec</li>
               </ul>
             </div>
           </div>
